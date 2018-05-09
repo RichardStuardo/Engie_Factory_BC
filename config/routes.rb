@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'transaction/user_registered'
+
+  get 'transaction/sale'
+
+  get 'transaction/buy'
+
+  get 'transaction/comunity'
+
+  get 'transaction/controller'
+
   root 'pages#index'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
