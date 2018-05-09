@@ -135,6 +135,13 @@ section .section-title {
     margin: 10px 0;
     box-shadow: 0 0  10px rgba(209, 219, 231,0.7);
 }
+.progress-outer2{
+    background: #fff;
+    border-radius: 50px;
+    padding: 4px;
+    margin: -2px 0;
+    box-shadow: 0 0  10px rgba(209, 219, 231,0.7);
+}
 .progress{
     height: 27px;
     margin: 0;
