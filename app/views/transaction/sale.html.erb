@@ -1,2 +1,37 @@
 <%= render 'shared/navbar' %>
+<section style="background-color: #F05F40;">
+	<center>
+	<div class="card" style="width: 23rem;">
+	 <%= image_tag 'casa.jpg', class: 'img-fluid' %>
+	  <div class="card-body">
+	    <h5 class="card-title">Tu energia</h5>
+	    <p class="card-text">Solo puedes vender la energia que no ocupaste</p>
+	  </div>
+	  <div class="container">
+    
+        <div class="col-md-12">  
+            <div class="progress-outer">
+            	<h4>Tu excedente</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:30%; box-shadow:-1px 10px 10px rgba(240, 173, 78,0.7);"></div>
+                    <div class="progress-value">20%</div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+	  <ul class="list-group list-group-flush">
+	    <li class="list-group-item">Cras jus</li>
+	    <li class="list-group-item">Dapibus ac facilisis in</li>
+	   
+	  </ul>
+	  <div class="card-body">
+	    <a href="<%= transaction_controller_path %> "  class="btn btn-primary btn-md js-scroll-trigger"  >Publicar tu Excedente</a>
+	    <br>
+	    <br>
+	  
+	  </div>
+	</div>
+	</center>
+</section>
 <%= render 'shared/footer' %>

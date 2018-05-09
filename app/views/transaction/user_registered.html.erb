@@ -2,11 +2,11 @@
 
 <section style="background-color: #F05F40;">
 	<center>
-	<div class="card" style="width: 18rem;">
+	<div class="card" style="width: 23rem;">
 	 <%= image_tag 'casa.jpg', class: 'img-fluid' %>
 	  <div class="card-body">
 	    <h5 class="card-title">Tu energia</h5>
-	    <p class="card-text">Acá verás tu consumo y exedente para hacer lo que quieras con tu energia</p>
+	    <p class="card-text">Acá verás tu consumo y excedente para hacer lo que quieras con tu energia</p>
 	  </div>
 	  <div class="container">
     
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="progress-outer">
-            	<h4>Tu exedente</h4>
+            	<h4>Tu excedente</h4>
                 <div class="progress">
                     <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:30%; box-shadow:-1px 10px 10px rgba(240, 173, 78,0.7);"></div>
                     <div class="progress-value">20%</div>
@@ -32,10 +32,10 @@
 	  <ul class="list-group list-group-flush">
 	    <li class="list-group-item">Cras justo odio</li>
 	    <li class="list-group-item">Dapibus ac facilisis in</li>
-	    <li class="list-group-item">Vestibulum at eros</li>
+	   
 	  </ul>
 	  <div class="card-body">
-	    <a href="#"  class="btn btn-primary btn-md js-scroll-trigger"  >Vender Energia</a>
+	    <a href="<%= transaction_sale_path %> "  class="btn btn-primary btn-md js-scroll-trigger"  >Vender Energia</a>
 	    <br>
 	    <br>
 	    <a href="<%= transaction_comunity_path %> " class="btn btn-primary btn-md ">Comprar Energia</a>
