@@ -1,0 +1,217 @@
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Engie Factory BC</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">¿Qué hacemos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Nuestras carreras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
+            </li>
+            <% if user_signed_in? %>
+             <li>  <%= current_user.first_name %> </li>
+            <li> <a href="<%=destroy_user_session_path %>"data-method ='delete'> Salir </a></li>
+              <% else %>
+            <li><a href="<%=new_user_session_path %>"> Login </a></li>
+            <li><a href="<%=new_user_registration_path %>"> Registro</a></li>
+              <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <%= render 'shared/header' %>
+
+    <section class="bg-primary" id="about">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">¿Qué hacemos? </h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4" style="font-size: 1.5rem;">Debido a que a la inseguridad que hay en saber si un profesional está titlado o no, nace Trasciende que valida la información con la institución llevandola a la red más segura llamada Blockchain. </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Empezar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">¿Por qué Engie Factory BC?</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Seguridad</h3>
+              <p class="text-muted mb-0">Su naturaleza convierte al blockchain en un sistema especialmente adecuado para almacenar de forma cada vez mayor datos ordenados en el tiempo y sin posibilidad de modificación ni revisión.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Rapidez</h3>
+              <p class="text-muted mb-0">Comparte tu energia teniendo tus beneficios</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Vende o compra energia!</h3>
+              <p class="text-muted mb-0">Busca y contacta a tu porfesional TI según sus Skill-Set</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="p-0" id="portfolio">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/fullstack.png' %>">
+              <%= image_tag 'portfolio/thumbnails/fullstack.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    FULL STACK
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/frontend.png' %>">
+              <%= image_tag 'portfolio/thumbnails/frontend.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    FRONT END
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/3.jpg' %>">
+              <%= image_tag 'portfolio/thumbnails/android.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    ANDROID
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/4.jpg' %>">
+              <%= image_tag 'portfolio/thumbnails/mkt-digital.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    MARKETING DIGITAL
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/5.jpg' %>">
+              <%= image_tag 'portfolio/thumbnails/videojuegos.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    VIDEOJUEGOS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="<%= asset_path 'portfolio/fullsize/6.jpg' %>">
+              <%= image_tag 'portfolio/thumbnails/react-icon.png', class: 'img-fluid' %>
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Bootcamp
+                  </div>
+                  <div class="project-name">
+                    REACT JS
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">Bienvenido al ahora!</h2>
+        <a class="btn btn-light btn-xl sr-button" href="">Empieza!</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">TryCatchCompany</h2>
+            <hr class="my-4">
+            <p class="mb-5">Proyecto apoyado con la ayuda de la Academia Desafio Latam,  realizado por Richard y Cristián de la generación 9 de Full Stack.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>+56 9 46965697</p>
+          </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <br>
+            <%= image_tag 'portfolio/thumbnails/logo.png', class: 'img-fluid' %>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">Stuardorichard@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,53 @@
+<header class="masthead text-center text-white ">
+<br>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="container">
+  <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          
+          <div class="login-panel panel panel-default">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Inicia Sesión</h3>
+              </div>
+              <div class="panel-body">
+                  <form role="form">
+                      <fieldset>
+                          <div class="form-group">
+                              <%= f.label :email, "Correo" %><br />
+                              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                          </div>
+                          <div class="form-group">
+                              <%= f.label :password, "Contraseña" %><br />
+                              <%= f.password_field :password, autocomplete: "off"%>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <% if devise_mapping.rememberable? -%>
+                                      <%= f.check_box :remember_me %>
+                                      <%= f.label :remember_me, "Recordar Contraseña"%>
+                                  <% end -%>
+                              </label>
+                          </div>
+                          <!-- Change this to a button or input when using this as a form -->
+                          
+                            <%= f.submit "Inicia Sesión", class: 'btn btn-md btn-info btn-block' %>
+                         
+                      </fieldset>
+                          <%= render "devise/shared/links" %>
+                  </form>
+              </div>
+          </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          
+        </div>
+      </div>
+    </div>
+<% end %>
+
+</header>

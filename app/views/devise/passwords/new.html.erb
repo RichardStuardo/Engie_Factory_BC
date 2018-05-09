@@ -1,0 +1,31 @@
+<header class="masthead text-center text-white ">
+  <br>
+  <br>
+  <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          
+        </div>
+         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<h2>¿Olvidaste tu contraseña?</h2>
+
+			<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+			  <%= devise_error_messages! %>
+
+			  <div class="field">
+			    <%= f.label :email,"Correo" %><br />
+			    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+			  </div>
+				<br>
+			  <div class="actions">
+			    <%= f.submit "Enviar correo", class: 'btn btn-md btn-info btn-block' %>
+			  </div>
+			<% end %>
+			<br>
+			<%= render "devise/shared/links" %>
+        </div>
+         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          
+        </div>
+
+  </div>		
+</header>
