@@ -13,7 +13,8 @@ gem 'pg', '~> 0.21.0'
 # Use Puma as the app server
 #  DEVISE
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
-
+gem 'ethereum.rb'
+gem 'faker'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
