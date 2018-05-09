@@ -1,2 +1,136 @@
 <%= render 'shared/navbar' %>
+<section style="background-color: #F05F40;">
+	<main >
+	<div class="container my-5">
+	       <div class="card-body text-center">
+	    <h4 class="card-title text-uppercase"> <strong>Proveedores locales </strong>  </h4>
+	  </div>
+	    <div class="card">
+	        
+	        <table class="table table-hover">
+	            <thead>
+	              <tr>
+	                <th scope="col"></th>
+	                <th scope="col">Proveedor</th>
+	                <th scope="col">Energia Disponible</th>
+	                <th scope="col">Comprar </th>
+	                
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr>
+	                <th scope="row">1</th>
+	                <td>Proveedor local 1</td>
+	                <td>200w</td>
+	                <td><a class="btn btn-sm btn-primary" href="#"><i class="far"></i> Comprar</a> </td>
+	              </tr>
+	              <tr>
+	                <th scope="row">2</th>
+	                <td>Proveedor local 2</td>
+	                <td>100w</td>
+	                <td>
+	                    <a class="btn btn-sm btn-primary" href="#"><i class="far"></i> Comprar</a> 
+	                </td>
+	                
+	              </tr>
+	              <tr>
+	                <th scope="row">3</th>
+	                <td>Proveedor local 3</td>
+	                <td>90w</td>
+	            	<td><a class="btn btn-sm btn-primary" href="#"><i class="far"></i> Comprar</a> </td>	
+	              </tr>
+	            </tbody>
+	          </table>
+	    </div>
+	    <!-- Large modal -->
+
+
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	          <div class="card-body text-center">
+	            <h4 class="card-title">Special title treatment</h4>
+	            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	          </div>
+	            <div class=" card col-8 offset-2 my-2 p-3">
+	          <form>
+	            <div class="form-group">
+	              <label for="listname">List name</label>
+	              <input type="text" class="form-control" name="listname" id="listname" placeholder="Enter your listname">
+	            </div>
+	            <div class="form-group">
+	              <label for="datepicker">Deadline</label>
+	              <input  type="text" class="form-control" name="datepicker" id="datepicker" placeholder="Pick up a date">
+	            </div>
+	            <div class="form-group">
+	                                    <label for="datepicker">Add a list item</label>
+	                <div class="input-group">
+
+	                  <input type="text" class="form-control" placeholder="Add an item" aria-label="Search for...">
+	                  <span class="input-group-btn">
+	                    <button class="btn btn-secondary" type="button">Go!</button>
+	                  </span>
+	                </div>
+	              </div>
+	           <div class="form-group text-center">
+	             <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+	          </div>
+	        </form>
+	    </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+	</main>
+</section>
+
+<div class="container">
+    <section id="timer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 countdown-wrapper text-center mb20">
+                <div class="card">
+                    <div class="card-header">
+                       <h3> Recuerda que el valor de la energia cambia según la hora!</h3>
+                    </div>
+                    <div class="card-block">
+    	                <div id="countdown">
+            	            <div class="well">
+                        	    <span id="hour" class="timer bg-success"></span>
+                        	    <span id="min" class="timer bg-info"></span>
+                        	    <span id="sec" class="timer bg-primary"></span>
+                        	</div>
+                    	</div>
+                    </div>
+                    
+                </div>
+    	    </div>
+    	</div>
+    </section>
+</div>
+<!-- Subscribe for upcomming event modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Subscribe for our upcomming Events</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email"> 
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> 
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+
 <%= render 'shared/footer' %>

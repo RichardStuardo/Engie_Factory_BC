@@ -20,6 +20,7 @@
 //= require scrollreveal
 //= require jquery.magnific-popup
 //= require creative
+//= require main
 
 //= require_tree .
 
