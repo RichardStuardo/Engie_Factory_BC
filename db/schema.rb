@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509043247) do
+ActiveRecord::Schema.define(version: 20180509061324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,8 +46,35 @@ ActiveRecord::Schema.define(version: 20180509043247) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "communities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_communities_on_user_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "course"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "price_communities", force: :cascade do |t|
+    t.bigint "price_id"
+    t.bigint "community_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["community_id"], name: "index_price_communities_on_community_id"
+    t.index ["price_id"], name: "index_price_communities_on_price_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.string "morning"
+    t.string "afternoon"
+    t.string "night"
+    t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -114,6 +141,9 @@ ActiveRecord::Schema.define(version: 20180509043247) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "communities", "users"
+  add_foreign_key "price_communities", "communities"
+  add_foreign_key "price_communities", "prices"
   add_foreign_key "student_course_informations", "courses"
   add_foreign_key "student_course_informations", "students"
   add_foreign_key "user_favorites_students", "students"

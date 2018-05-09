@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  morning: MyString
+  afternoon: MyString
+  night: MyString
+  price: MyString
+
+two:
+  morning: MyString
+  afternoon: MyString
+  night: MyString
+  price: MyString
