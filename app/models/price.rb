@@ -1,3 +1,3 @@
 class Price < ApplicationRecord
-  has_many :price_hours
+  has_many :price_communities
 end
