@@ -3,14 +3,18 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h1 class="text-uppercase"> <%= image_tag 'portfolio/thumbnails/logo.png', class: 'img-fluid' %>
-          <strong>Enegie Factory BC</strong>
+          <strong>Engie Factory BC</strong>
         </h1>
         <hr>
       </div>
       <div class="col-lg-8 mx-auto">
         <p class="text-faded mb-5"> Disfruta de la energia renovable en comunidad
  </p>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Empezar</a>
+        <% if user_signed_in? %>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="<%= transaction_user_registered_path %>">Empezar</a>
+        <% else %>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="<%= user_session_path %>">Iniciar Sesión</a>
+        <% end %>
       </div>
     </div>
   </div>
